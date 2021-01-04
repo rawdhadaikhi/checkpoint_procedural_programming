@@ -1,0 +1,29 @@
+FUNCTION dot_product(VAR v1,v2 : ARRAY_OF INTEGER) : INTEGER
+VAR
+    i, ps : INTEGER;
+
+BEGIN
+    ps :=0;
+    FOR i FROM 0 TO v1.length-1 STEP 1  DO
+        FOR j FROM 0 TO v2.length-1 STEP 1  DO
+    ps += v1[i] * v2[j];
+    RETURN ps ;
+END
+ALGORITHM product
+VAR
+
+   v1: ARRAY_OF INTEGER[5];
+   v2 : ARRAY_OF INTEGER[5];
+    // i,n : INTEGER ;
+    // v : ARRAY_OF INTEGER[];
+BEGIN
+v1 := {5,2,8,3,7};
+v2 := {2,4,6,8,3};
+
+// read(n);
+// FOR i FROM 0 TO n STEP 1  DO
+// read(v[i]);
+// END_FOR
+
+dot_product(v1,v2);
+END
